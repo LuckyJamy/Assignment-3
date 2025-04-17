@@ -14,6 +14,11 @@ body {
     padding-top: 4rem;
 }
 
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .social-icons a {
     text-decoration: none;
 }
@@ -32,12 +37,6 @@ body {
     width: 100%;
     z-index: 1000;
     transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.social-icons {
-    display: flex;
-    display: flex-end;
-    justify-content: flex-end;
 }
 
 .contact-header.hidden {
@@ -220,6 +219,7 @@ p {
     text-align: left;
     margin-top: 4%;
     margin-left: 2%;
+    font-feature-settings: "smpc" 1;
 }
 
 .exhibition-header {
@@ -422,12 +422,21 @@ p {
         font-size: 10rem;
     }
 
+    #last-name {
+        padding-left: 0;
+    }
+
+    #based-location {
+        font-size: 1rem;
+    }
+
     .header-text {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .homepage-text {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     .gallery-item {
@@ -449,10 +458,49 @@ p {
         height: auto;
     }
 
+    .bio-image-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bio-image-container img {
+        width: 70%;
+        height: auto;
+    }
+
     .bio-image-container img,
     .exh-image-container img {
         width: 60%;
         height: auto;
+    }
+
+    #fashion-button, #architecture-button {
+        margin-top: 0; 
+        margin-bottom: 0; 
+        padding-top: 0; 
+        padding-bottom: 0; 
+    }
+
+    .exh-image-container {
+        flex-direction: column;
+        align-items: center; 
+        gap: 1rem; 
+    }
+
+    .exh-image-container img {
+        width: 70%; 
+        height: auto;
+    }
+
+    .exhibition-header {
+        font-size: 5rem; 
+        text-align: center; 
+    }
+
+    .exhibition-text {
+        font-size: 1.2rem;
+        text-align: center;
     }
 }
 
@@ -465,12 +513,22 @@ p {
         font-size: 6rem;
     }
 
+    #last-name {
+        padding-left: 0;
+    }
+
+    #based-location {
+        font-size: 1rem;
+    }
+
     .header-text {
         font-size: 3rem;
+        text-align: center;
     }
 
     .homepage-text {
         font-size: 1rem;
+        text-align: center;
     }
 
     .menu {
@@ -513,10 +571,42 @@ p {
         margin-top: 0;
     }
 
+    .bio-image-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .bio-image-container img {
+        width: 90%;
+        height: auto;
+    }
+
     .bio-image-container img,
     .exh-image-container img {
         width: 80%;
         height: auto;
         margin-bottom: 1rem;
+    }
+
+    .exh-image-container {
+        flex-direction: column; 
+        align-items: center;
+        gap: 0.5rem; 
+    }
+
+    .exh-image-container img {
+        width: 90%; 
+        height: auto; 
+    }
+
+    .exhibition-header {
+        font-size: 3rem; 
+        text-align: center; 
+    }
+
+    .exhibition-text {
+        font-size: 1rem; 
+        text-align: center;
     }
 }

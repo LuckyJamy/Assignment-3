@@ -5,10 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > lastScrollY) {
-            // Scrolling down
             header.classList.add("hidden");
         } else {
-            // Scrolling up
             header.classList.remove("hidden");
         }
         lastScrollY = window.scrollY;
@@ -33,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const fashionButton = document.getElementById('fashion-button');
