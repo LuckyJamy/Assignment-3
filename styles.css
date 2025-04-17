@@ -1,0 +1,482 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    background: radial-gradient(circle, #DEAFDE, white);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+body {
+    padding-top: 4rem; /* Add padding to prevent content from overlapping the fixed header */
+}
+
+.social-icons a {
+    text-decoration: none; /* Remove underline */
+}
+
+
+.contact-header {
+    background-color: #EBD0EC;
+    color: #300131; 
+    font-weight: 50;
+    text-align: center; 
+    padding: 1rem 0; 
+    font-family: playfair display, serif; 
+    font-size: 1rem; 
+    border-top: 0.050rem solid #300131;
+    position: fixed;
+    bottom: 0; /* Move the header to the bottom */
+    width: 100%; 
+    z-index: 1000; 
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.social-icons {
+    display: flex;
+    display: flex-end;
+    justify-content: flex-end;
+}
+
+.contact-header.hidden {
+    transform: translateY(100%); /* Move header out of view when hidden */
+    opacity: 0;
+}
+
+.container {
+    transform: translateX(-0px);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FRONT PAGE */
+.title-container {
+    margin-top: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.text-container {
+    display: flex;
+    align-items: flex-end;
+}
+
+.bio-image-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 4%;
+    gap: 2rem; 
+}
+
+.exh-image-container{
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2%;
+    gap: 1rem; 
+}
+
+.profile-image {
+    width: auto; /* Adjust width automatically to maintain aspect ratio */
+    height: 40vh; /* Set a consistent height for both images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+}
+
+.ex-year{
+    font-weight: bold; /* idk why this doesnt work worry about it later */
+}
+
+h1 {
+    color: #300131;
+    margin: 0;
+    padding: 0;
+    font-family: Playfair Display, serif;
+    font-weight: 600;
+}
+
+h2 {
+    margin: 0;
+}
+
+.header-text2{
+    font-size: 2rem;
+    color: #300131;
+    display: flex;
+    text-align: left;
+    padding-right: 50%;
+    margin-top: 1%;
+    font-weight: 200;
+    font-style: italic; /* Make text italic */
+}
+
+#based-location {
+    font-weight: 540;
+    font-style: italic;
+    color: #300131;
+    font-size: 2rem;
+    margin-bottom: 3.5rem;
+    padding-left: 2rem;
+    
+}
+
+#first-name, #last-name {
+    color: #300131;
+    font-size: 15rem;
+    text-align: center;
+    margin: 0;
+    font-family: Playfair Display, serif;
+}
+
+#last-name {
+    padding-left: 20%;
+}
+
+.menu {
+    color: #300131;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    justify-content: flex-start;
+    padding: 0;
+    position: fixed;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-70%);
+    height: auto;
+    overflow: hidden;
+    max-height: 50px;
+    transition: max-height 0.3s ease-in-out;
+    background: transparent; /* Fully transparent background */
+    z-index: 1000;
+    margin-top: 0;
+}
+
+.menu.expanded {
+    max-height: 30%; 
+}
+
+.menu-button {
+    font-size: 2.5rem;
+    padding: 1rem;
+    font-style: bold;
+    cursor: pointer;
+    user-select: none;
+    background: transparent; /* Fully transparent background */
+    z-index: 1001;
+}
+
+.menu-item {
+    display: none; /* Initially hidden */
+    margin: 0 10px;
+}
+
+.menu-item.active {
+    font-weight: bold; /* Make the active menu item bold */
+}
+
+.menu-item:hover, .menu-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu-link {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+p {
+    color: #300131;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0;
+    font-family: Playfair Display, serif;
+}
+
+/* BIO PAGE */
+.header-text {
+    font-size: 7rem;
+    /* width: 100%; */
+    display: flex;
+    text-align: left;
+    margin-top: 0;
+    padding-right: 35%;
+}
+
+.homepage-text {
+    max-width: 70%;
+    text-align: left;
+    margin-top: 4%; /* Move down */
+    margin-left: 2%;
+}
+
+
+.exhibition-header{
+    font-size: 7rem;
+    color: #300131;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.exhibition-text{
+    max-width: 70%;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+/* WORK PAGE */
+.work-toggle-text {
+    width: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: flex-start; /* Place the text near the top */
+    gap: 3%; /* Add spacing between the words */
+    margin-top: 0;
+    padding-top: 5%; /* Add padding at the top to place text near the top */
+    padding-bottom: 50%;
+    padding-left: 30%;
+}
+
+#architecture-button {
+    font-size: 2.5rem;
+    color: #948F99;
+    text-align: center;
+    font-family: Playfair Display, serif;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    margin-top: 0;
+}
+
+#fashion-button {
+    font-style: italic;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #300131;
+    text-align: center;
+    font-family: Playfair Display, serif;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#fashion-button:focus,
+#fashion-button:active,
+#fashion-button.active {
+    text-decoration: underline;
+    outline: none;
+}
+
+.container-image-gallery {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 5%;
+    margin-top: -45%;
+}
+
+.gallery-item {
+    position: relative;
+    display: inline-block; 
+    width: 500px; 
+    margin: 0 0 2rem 2rem;
+    vertical-align: top; 
+}
+
+.gallery-image {
+    width: 100%;
+    height: 700px; 
+    display: block; 
+    object-fit: cover; 
+    object-position: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 10%; /* Position caption at the bottom of the image */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1; /* Show caption on hover */
+}
+
+
+/* SHOWCASE */
+.image-showcase-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align images to the left */
+    align-items: flex-start; /* Align items to the top */
+    margin-left: 10%;
+    gap: 0;;
+}
+
+.image-showcase-container img {
+    width: 48%; /* Set a consistent width for all images */
+    height: 95vh; /* Ensure consistent height */
+    object-fit: cover; /* Ensure the image fits within the container */
+    margin-top: 1rem; /* Remove all margins to eliminate gaps */
+    gap: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow behind the images */
+}
+
+.return-button {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
+    font-size: 2rem;
+    font-family: playfair display, serif;
+    font-style: italic;
+    padding: 0;
+    padding-left: 1%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed; 
+    top: 1rem; 
+    left: 1rem;
+    z-index: 1000;
+}
+
+.return-button:hover{
+    text-decoration: underline; /* Add underline on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* SCROLL BAR */
+.scroll-bar {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 450px; /* Total height of the scroll bar */
+}
+
+.scroll-bar::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: calc(450px - 8rem); /* Reduce height slightly to remove the extra part poking out */
+    background-color: #ccc;
+    z-index: -1; /* Place behind the circles */
+}
+
+.scroll-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc((450px - 3rem) / 3); /* Dynamically space circles to align with the bar */
+}
+
+.scroll-link {
+    display: block;
+    width: 20px; /* Make circles slightly larger */
+    height: 20px; /* Make circles slightly larger */
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.scroll-link.active {
+    background-color: #300131; /* Highlight active section */
+    transform: scale(1.2); /* Slightly enlarge the active indicator */
+}
+
+/* RESPONSIVE DESIGN */
+/* tablet sizes */
+@media screen and (max-width: 960px) {
+    .container {
+        padding: 2rem;
+    }
+
+    #first-name, #last-name {
+        font-size: 10rem; /* Reduce font size for smaller screens */
+    }
+
+    .header-text {
+        font-size: 5rem; /* Adjust header size */
+    }
+
+    .homepage-text {
+        font-size: 1.2rem; /* Adjust paragraph font size */
+    }
+
+    .gallery-item {
+        width: 45%; /* Adjust gallery item width for better fit */
+    }
+}
+
+/* mobile sizes */
+@media screen and (max-width: 550px) {
+    .container {
+        padding: 1rem;
+    }
+
+    #first-name, #last-name {
+        font-size: 6rem; /* Further reduce font size for mobile */
+    }
+
+    .header-text {
+        font-size: 3rem; /* Adjust header size for mobile */
+    }
+
+    .homepage-text {
+        font-size: 1rem; /* Adjust paragraph font size */
+    }
+
+    .menu {
+        font-size: 1.2rem; /* Adjust menu font size */
+        left: 5%; /* Adjust menu position */
+    }
+
+    .gallery-item {
+        width: 80%; /* Make gallery items full width */
+        margin: 0 0 2rem 0; /* Add spacing between items */
+    }
+
+    .gallery-caption {
+        font-size: 0.8rem; /* Adjust caption font size */
+        padding: 0.3rem 0.5rem; /* Adjust padding */
+    }
+}
